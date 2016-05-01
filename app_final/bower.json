@@ -1,0 +1,12 @@
+{
+  "name": "loading-angular-activmx",
+  "description": "A starter project for AngularJS",
+  "version": "0.0.0",
+  "homepage": "https://github.com/angular/angular-seed",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular": "~1.x",
+    "angular-route": "~1.x"
+  }
+}

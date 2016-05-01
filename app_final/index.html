@@ -1,0 +1,57 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Activ | AngularJS First Steps</title>
+    <link rel="stylesheet" href="http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+    <link href='http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css' rel='stylesheet' type='text/css'>
+    <link href='./css/app.css' rel='stylesheet' type='text/css'>
+    <script src="bower_components/angular/angular.min.js"></script>
+  </head>
+  <body ng-app="app">
+    <div class="top-bar">
+      <div class="top-bar-left">
+        <ul class="menu">
+          <li class="menu-text"><a href="http://www.activ.com.mx"><img src="images/logotipo_activ.png" width="100" /></a></li>
+          <li class="menu-text">Home</li>
+        </ul>
+      </div>
+    </div>
+    <div class="row column">
+      <h3>AngularJS First Steps </h3>
+    </div>
+    <div class="row column" ng-controller="WelcomeController">
+      <br>
+      <div class="callout">
+        <h3>Welcome, {{name}}</h3>
+      </div>
+      <button class="button" ng-click="greetMe()">Click me</button>
+    </div>
+    <hr>
+    <div class="callout large secondary">
+    <div class="row">
+      <div class="large-12 columns">
+        <h5>AngularJS course @Activ</h5>
+        <p>examples by: <a href="https://twitter.com/bpineda">@bpineda</a></p>
+        </h4>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
+    <script>
+      $(document).foundation();
+      var app = angular.module('app', []);
+      app.controller('WelcomeController', function($scope)
+                                          {
+                                            $scope.name = 'Benjamin';
+                                            $scope.greetMe = function()
+                                            {
+                                              alert('Hello, ' + $scope.name);
+                                            }
+                                          }
+      );
+    </script>
+    <script type="text/javascript" src="https://intercom.zurb.com/scripts/zcom.js"></script>
+  </body>
+</html>
